@@ -11,10 +11,14 @@ router.get('/', (req, res) => {
 })
 // new
 
+
 router.get('/new', (req, res) => {     
     res.render('New')
 })
+// create
+router.post('/', (req, res) => {
 
+})
 // delete
 
 // update
