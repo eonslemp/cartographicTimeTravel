@@ -1,16 +1,22 @@
 const React = require('react')
-// const DefaultLayout = require('./Layouts/layout')
+const Layout = require('./Layouts/layout')
 
 
 class Index extends React.Component {
 
     render() {
-
+        const maps = 'X'
         return (
-            <div>
-                    <h1>Our Maps</h1>
-                 
-            </div>
+            <Layout>
+                
+                <body>
+                
+                </body>
+                 <nav>
+                    <a href="/products/new">Add a map to inventory</a>
+                </nav>
+
+            </Layout>
         )
     }
 }

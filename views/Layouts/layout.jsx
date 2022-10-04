@@ -4,9 +4,20 @@ class Layout extends React.Component {
     render() {
         return (
             <html>
-                <head></head>
+                <head>
+                <link rel="stylesheet" href="/style.css" />
+                </head>
+                <h1>
+                    <a href='/products'> Our Maps </a>
+                </h1>
+                <br />
                 <body>
-                    Layout
+                    {/* <h1>
+                        <a href='/products'> Our Maps </a>
+                    </h1> */}
+
+                    {this.props.children}
+                    <br />
                 </body>
             </html>
         )

@@ -7,30 +7,16 @@ const Map = require('./models/mapModel')
 
 // index
 router.get('/', (req, res) => {
-    res.render('products/Index')
-    // , {map: maps}
+    res.render('Index')
 })
 // new
 
-// router.get('/new', (req, res) => {     
-//     res.render('products/New')
-// })
+router.get('/new', (req, res) => {     
+    res.render('New')
+})
 
 // delete
 
-// router.delete('/:index', (req, res) => {
-//     res.send('Piece of History deleted')
-// })
-
-// router.post('/', (req, res) => {
-//     fruits.push(req.body)
-//     res.redirect('/fruits')
-// })
-
-// router.get('/:index', (req, res) => {
-//     // res.send(fruits[req.params.index])
-//     res.render('fruits/Show', //{ fruit: fruits[req.params.index] })
-// })
 // update
 
 // create
@@ -40,9 +26,9 @@ router.get('/', (req, res) => {
 // show
 
 
-const {
-    AllMaps
-} = require('./Controllers/controller')
+// const {
+//     AllMaps
+// } = require('./Controllers/controller')
 
 
 module.exports = router
