@@ -36,15 +36,17 @@ router.post('/', (req, res) => {
         }
     })
 })
-// delete
 
+// map show page
+// edit view
 
+// router.get('/edit', (req, res) =>{
+
+// })
 
 // update
 
-// create
-
-// edit
+// delete
 
 // show
 

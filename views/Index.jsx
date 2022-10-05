@@ -17,8 +17,11 @@ class Index extends React.Component {
                     {maps.map((map) => {
                         return (
                             <li key={map._id} id='items'>
-                                The map of <a>{`${map.city}, ${map.country}`}</a>, in the year {`${map.year}`}  
-                                <img src={`${map.path}`} alt="image not available" />
+                                {console.log(map.path)}
+                                <div>
+                                A map of {` ${map.city}, ${map.country}`} in the year {`${map.year}`}  
+                                <img src=''  alt="image not available" />
+                                </div>
                                 
                             </li>
                         )

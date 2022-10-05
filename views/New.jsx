@@ -24,8 +24,8 @@ class New extends React.Component {
 
                     <br />
 
-                    <label htmlFor="image">Path: </label>
-                    <input type="text" id="img-path" name="image" />
+                    <label htmlFor="path">Path: </label>
+                    <input type="text" id="path" name="path" />
 
                     <br />
 
