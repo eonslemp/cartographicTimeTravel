@@ -8,7 +8,9 @@ class Edit extends React.Component {
         // let { vegetable } = this.props
         return (    
             <Layout title="Map Edit Page" >
-                <h1>Edit Map data</h1>
+                <header id='header'>
+                <h1>Edit Map Data</h1>
+                </header>
                 <form action={`/products/${map._id}?_method=PUT`} method="POST">
             
                     <label htmlFor="country">Country: </label>
@@ -48,6 +50,9 @@ class Edit extends React.Component {
                     <input type="submit" value="Edit Data"/>
                     <img src={map.path} alt="no image" id='edit-image' />
                 </form>
+                <nav>
+                    <a href="/products">Back to the Map Index</a>
+                </nav>
             </Layout>
         )
     }

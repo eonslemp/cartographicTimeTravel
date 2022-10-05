@@ -3,7 +3,7 @@ const React = require('react')
 class Layout extends React.Component {
     render() {
         return (
-            <html>
+            <html id='layout'>
                 <head>
                 <link rel="stylesheet" href="/style.css" />
                 </head>

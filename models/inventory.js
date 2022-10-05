@@ -3,7 +3,7 @@ const maps = [
         country:'Netherlands',
         city:'Amsterdam',
         year:'1662',
-        path: 'https://www.amsterdam-cadeau.nl/wp-content/uploads/2020/08/rsz_amsterdam-oude-kaart-van-visscher-nh-ams-10d-pla-1.jpg',
+        path: 'https://sanderusmaps.com/assets/WEBP/m26732.webp',
         illustrator:'Daniel Stalpert',
         quantity: 3,
         price: "45.00",
@@ -81,8 +81,19 @@ const maps = [
         quantity: 1,
         price: '220.00',
     },
+    {
+        country:  'Italy',
+        city: "Palermo",
+        year:"1588",
+        path: 'https://sanderusmaps.com/assets/RESIZEDNEW/large_M18475.jpg',
+        illustrator: 'Georg Braun',
+        quantity: 2,
+        price: '175.00'
+    }
    
 ]
+
+
 
 
 

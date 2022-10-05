@@ -1,9 +1,10 @@
-const { metaProperty } = require('@babel/types')
+// const { metaProperty } = require('@babel/types')
 const express = require('express')
 
 const router = express.Router()
 
 const Map = require('./models/mapModel')
+
 
 
 // index
@@ -29,6 +30,9 @@ router.get('/', (req, res) => {
             }
         })
  })
+
+
+ 
 // new
 
 
@@ -83,6 +87,11 @@ router.delete('/:id', (req, res) => {
         }
     })
 })
+
+
+
+
+
 
 
 module.exports = router

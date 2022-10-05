@@ -7,11 +7,21 @@ body {
     justify-content: center;
     color:rgb(193, 75, 20)
 }
+#layout {
+    display: flex;
+    justify-content: center;
+}
+header {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
 
 #index-title {
     display:flex;
     font-size: 50px;
     justify-content: center;
+    /* background-color: black; */
     /* color:brown */
 }
 
@@ -20,6 +30,14 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     
+}
+
+#show-image {
+    padding: 10px;
+}
+
+#out {
+    color: blue;
 }
 
 #item {
@@ -43,4 +61,10 @@ button {
     height: 400px;
     display: flex;
     justify-content: center;
+    padding: 10px;
 }
+
+/* #index-image {
+    border: 5px;
+    border-color: black;
+} */

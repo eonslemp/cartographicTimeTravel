@@ -5,7 +5,9 @@ class New extends React.Component {
     render() {
         return (
             <Layout title="Add New Map" >
+                <header id='header'>
                 <h1>Add a Map</h1>
+                </header>
                 <br />
                 <form action="/products" method="POST">
 
@@ -46,6 +48,9 @@ class New extends React.Component {
 
                     <input type="submit" value="Create Product"/>
                 </form>
+                <nav>
+                    <a href="/products">Back to the Map Index</a>
+                </nav>
             </Layout>
         )
     }

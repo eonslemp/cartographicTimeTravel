@@ -6,27 +6,30 @@ class Index extends React.Component {
 
     render() {
         const { maps } = this.props
+        
         return (
             <Layout>
                 <body>
-                <header>
+                <header id='header'>
                  <h1 id='index-title'>Cartographic Time Travel</h1>
-                 </header>
-                
+                </header>
+                <nav>
+                    <a href="/products/new">Add a map to inventory</a>
+                </nav>
 
                     <ul id='map-index'>
                     {maps.map((map) => {
                         return (
-                            <li key={map._id}>
+                            <div key={map._id} id='index-image'>
                                 {console.log(map.path)}
                                 <div id='item'>
-                                A map of {` ${map.city}, ${map.country}`} in the year {`${map.year}`}  
+                                {` ${map.city}, ${map.country}`} in the year {`${map.year}`}  
                                 <a href={`/products/${map._id}`}>
                                     <img src={`${map.path}`}  alt="image not available" id='images'/>
                                 </a>
                                 </div>
                                 
-                            </li>
+                            </div>
                         )
 
                     })}
