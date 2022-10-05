@@ -31,10 +31,12 @@ app.use(methodOverride("_method"))
 app.use('/products', Routes)
 
 app.listen(port, () => {
-    console.log('listening to port: ', port)
+    console.log(`listening to port: ${port}`)
 })
 
 mongoConfig()
+
+
 
 
 

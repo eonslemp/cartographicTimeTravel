@@ -1,9 +1,30 @@
 body {
-    background-color: rgb(231, 216, 179);
+    background-color: rgb(220, 193, 158);
     font-size: 20px;
     font-family: Trebuchet MS;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color:rgb(193, 75, 20)
 }
 
+#index-title {
+    display:flex;
+    font-size: 50px;
+    justify-content: center;
+    /* color:brown */
+}
+
+#map-index {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+#items {
+    margin: 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+}

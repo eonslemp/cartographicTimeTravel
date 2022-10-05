@@ -19,7 +19,12 @@ class New extends React.Component {
 
                     <br />
 
-                    <label htmlFor="image">Path to Image: </label>
+                    <label htmlFor="year">Year: </label>
+                    <input type="text" id="year" name="year" />
+
+                    <br />
+
+                    <label htmlFor="image">Path: </label>
                     <input type="text" id="img-path" name="image" />
 
                     <br />

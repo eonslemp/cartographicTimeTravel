@@ -1,3 +1,4 @@
+const { metaProperty } = require('@babel/types')
 const express = require('express')
 
 const router = express.Router()
@@ -7,9 +8,19 @@ const Map = require('./models/mapModel')
 
 // index
 router.get('/', (req, res) => {
-    res.render('Index')
+    // res.render('Index')
+
+    Map.find({},(err, foundmap)=>{
+        if(err){
+            res.status(400).json(err)
+        } else {
+            res.status(200).render('Index', {maps: foundmap})
+        }
+    })
 })
 // new
+
+
 
 
 router.get('/new', (req, res) => {     
@@ -17,9 +28,17 @@ router.get('/new', (req, res) => {
 })
 // create
 router.post('/', (req, res) => {
-
+    Map.create(req.body, (err, createdMap) =>{
+        if(err){
+            res.status(400).json(err)
+        } else {
+            res.status(200).redirect('/products')
+        }
+    })
 })
 // delete
+
+
 
 // update
 

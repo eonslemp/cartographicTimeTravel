@@ -7,11 +7,14 @@ class Layout extends React.Component {
                 <head>
                 <link rel="stylesheet" href="/style.css" />
                 </head>
-                <h1>
+                {/* <h1>
                     <a href='/products'> Our Maps </a>
-                </h1>
+                </h1> */}
                 <br />
                 <body>
+                    <div>
+                        <a href='/products'> Our Maps </a>
+                     </div>
                     {/* <h1>
                         <a href='/products'> Our Maps </a>
                     </h1> */}
