@@ -64,7 +64,7 @@ const maps = [
         price:'240.00',
     },
     {
-        country:'United Stated',
+        country:'United States',
         city:'New York',
         year: '1776',
         path:'https://cdn.shopify.com/s/files/1/1613/8973/products/new-york-1776-hudson-map__57239.1413736574.1280.1280.jpg?v=1480556048',

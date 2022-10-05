@@ -18,6 +18,17 @@ router.get('/', (req, res) => {
         }
     })
 })
+
+// update map data
+ router.put('/:id', (req, res) =>{
+        Map.findByIdAndUpdate(req.params.id, req.body, (err,foundMap) =>{
+            if(err) {
+                res.status(400).json(err)
+            } else {
+                res.status(200).redirect(`/products/${req.params.id}`)
+            }
+        })
+ })
 // new
 
 
@@ -37,23 +48,41 @@ router.post('/', (req, res) => {
     })
 })
 
+
 // map show page
+
+router.get('/:id', (req, res) => {
+    Map.findById(req.params.id, (err, foundMap) =>{
+        if(err){
+            res.status(404).json(err)
+        } else {
+            res.status(200).render('Show', {map: foundMap})
+        }
+    })
+})
+
 // edit view
 
-// router.get('/edit', (req, res) =>{
-
-// })
-
-// update
+router.get('/:id/edit', (req, res) => {
+    Map.findById(req.params.id, (err, foundMap) =>{
+        if(err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).render('Edit', {map: foundMap})
+        }
+    })
+})
 
 // delete
-
-// show
-
-
-// const {
-//     AllMaps
-// } = require('./Controllers/controller')
+router.delete('/:id', (req, res) => {
+    Map.findByIdAndDelete(req.params.id, (err, mapDelete) => {
+        if(err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).redirect('/products')
+        }
+    })
+})
 
 
 module.exports = router

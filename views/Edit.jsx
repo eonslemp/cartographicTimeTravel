@@ -1,31 +1,56 @@
-// const React = require('react')
-// const Layout = require('../Layouts/layout')
+const React = require('react')
 
-// class Show extends React.Component {
+const Layout = require('./Layouts/layout')
 
-//     render() {
+class Edit extends React.Component {
+    render() {
+        const { map } = this.props
+        // let { vegetable } = this.props
+        return (    
+            <Layout title="Map Edit Page" >
+                <h1>Edit Map data</h1>
+                <form action={`/products/${map._id}?_method=PUT`} method="POST">
+            
+                    <label htmlFor="country">Country: </label>
+                    <input type="text" id="country" name="country" defaultValue={map.country}/>
 
-//         const { name, type, _id } = this.props.map
+                    <br />
 
-//         return (
-//             <Layout title={`${name} details`} >
-//                 <h1>{`${}`}</h1>
-//                 <p>
-//                     The {name} is {type}
-//                 </p>
-//                 <button>
-//                 <a href={`/meats/${_id}/edit`}>Edit</a>
-//                 </button>
-//                 <form action={`/meats/${_id}?_method=DELETE`} method='POST'>
-//                     <input type="submit" value="DELETE" />
-//                 </form>
+                    <label htmlFor="city">City: </label>
+                    <input type="text" id="city" name="city" defaultValue={map.city}/>
 
-//                 <nav>
-//                     <a href="/products">Back to the Maps</a>
-//                 </nav>
-//             </Layout>
-//         )
-//     }
-// }
+                    <br />
 
-// module.exports = meatShow
+                    <label htmlFor="year">Year: </label>
+                    <input type="text" id="year" name="year" defaultValue={map.year}/>
+
+                    <br />
+
+                    <label htmlFor="path">Path: </label>
+                    <input type="text" id="path" name="path" defaultValue={map.path}/>
+
+                    <br />
+
+                    <label htmlFor="illustrator">Illustrator: </label>
+                    <input type="text" id="illustrator" name="illustrator" defaultValue={map.illustrator}/>
+
+                    <br />
+
+                    <label htmlFor="quantity">Quantity: </label>
+                    <input type="number" id="quantity" name="quantity" defaultValue={map.quantity}/>
+
+                    <br />
+
+                    <label htmlFor="price">Price: </label>
+                    <input type="number" id="price" name="price" defaultValue={map.price}/>
+                    
+                    <br />
+                    <input type="submit" value="Edit Data"/>
+                    <img src={map.path} alt="no image" id='edit-image' />
+                </form>
+            </Layout>
+        )
+    }
+}
+
+module.exports = Edit

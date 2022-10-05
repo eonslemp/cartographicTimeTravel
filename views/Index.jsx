@@ -13,14 +13,17 @@ class Index extends React.Component {
                  <h1 id='index-title'>Cartographic Time Travel</h1>
                  </header>
                 
+
                     <ul id='map-index'>
                     {maps.map((map) => {
                         return (
-                            <li key={map._id} id='items'>
+                            <li key={map._id}>
                                 {console.log(map.path)}
-                                <div>
+                                <div id='item'>
                                 A map of {` ${map.city}, ${map.country}`} in the year {`${map.year}`}  
-                                <img src=''  alt="image not available" />
+                                <a href={`/products/${map._id}`}>
+                                    <img src={`${map.path}`}  alt="image not available" id='images'/>
+                                </a>
                                 </div>
                                 
                             </li>

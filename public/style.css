@@ -22,9 +22,25 @@ body {
     
 }
 
-#items {
+#item {
     margin: 20px;
     color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#images {
+    height: 500px;
+    width:  500px;
+}
+
+button {
+    width: 100px;
+}
+
+#edit-image {
+    width: 600px;
+    height: 400px;
     display: flex;
     justify-content: center;
 }
