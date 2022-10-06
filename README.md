@@ -1,6 +1,6 @@
 # **Cartographic Time Travel**
 
- Vintage maps provide the one of the best ways to glimpse the past.  They are models of world inhabited by people generations ago.  Leading craftsmen of those times created these artifacts for practical purposes, but now, surviving examples occupy a different category of human experience:  Art. My fascination with these artifacts are the origin point for this initial exploration of the creating, reading, updating, and deleting functionality so critical to the modern web development.  This project renders the beginnings of a basic online store dedicated to these artifacts.  
+ Vintage maps are models of the world of people that lived generations ago. As such they are one of the best ways to get a glimpse of what life was once like.  Leading craftsmen of those times created these artifacts for practical purposes, but now, surviving examples prvide for a different category of human experience:  Art. My fascination with these artifacts are the origin point for this initial exploration of the creating, reading, updating, and deleting functionality so critical to modern web development.  This project renders the beginnings of a basic online store dedicated to these artifacts.  
 
 ## **The Stack**
  In addition to Javascript this project uses MERN stack components.  NodeJS contributes server architecture, Express is the router framework for seven basic routes defining the functionality of the application.  React unifies and expresses the HTML and CSS of the front end of the application.The database is MongoDB.  
