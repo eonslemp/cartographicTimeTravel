@@ -1,16 +1,15 @@
-// const { metaProperty } = require('@babel/types')
+// import router
 const express = require('express')
-
+// defining router variable
 const router = express.Router()
-
+// import MONGO schema 
 const Map = require('./models/mapModel')
 
 
 
-// index
+// set  up index route
 router.get('/', (req, res) => {
-    // res.render('Index')
-
+ 
     Map.find({},(err, foundmap)=>{
         if(err){
             res.status(400).json(err)
@@ -20,7 +19,7 @@ router.get('/', (req, res) => {
     })
 })
 
-// update map data
+// edit functionality for the  database
  router.put('/:id', (req, res) =>{
         Map.findByIdAndUpdate(req.params.id, req.body, (err,foundMap) =>{
             if(err) {
@@ -30,18 +29,11 @@ router.get('/', (req, res) => {
             }
         })
  })
-
-
- 
-// new
-
-
-
-
+// routes accessing the create new product page
 router.get('/new', (req, res) => {     
     res.render('New')
 })
-// create
+// route for product creation
 router.post('/', (req, res) => {
     Map.create(req.body, (err, createdMap) =>{
         if(err){
@@ -53,8 +45,7 @@ router.post('/', (req, res) => {
 })
 
 
-// map show page
-
+// accesses map show page
 router.get('/:id', (req, res) => {
     Map.findById(req.params.id, (err, foundMap) =>{
         if(err){
@@ -65,8 +56,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-// edit view
-
+// accesses edit page
 router.get('/:id/edit', (req, res) => {
     Map.findById(req.params.id, (err, foundMap) =>{
         if(err) {
@@ -77,7 +67,7 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
-// delete
+// delete route
 router.delete('/:id', (req, res) => {
     Map.findByIdAndDelete(req.params.id, (err, mapDelete) => {
         if(err) {
@@ -87,47 +77,7 @@ router.delete('/:id', (req, res) => {
         }
     })
 })
-
-
-
-
-
-
+// export of router object
 
 module.exports = router
 
-
-
-// // Setup "create" route
-// router.post('/', (req, res) => {
-//     if (req.body.readyToEat === "on") {
-//         req.body.readyToEat = true
-//     } else {
-//         req.body.readyToEat = false
-//     }
-//     fruits.push(req.body)
-//     res.redirect('/fruits')
-// })
-
-// // Setup "show" route  
-// router.get('/:index', (req, res) => {
-//     // res.send(fruits[req.params.index])
-//     res.render('fruits/Show', { fruit: fruits[req.params.index] })
-// })
-
-// // Setup "edit" route
-// router.get('/:index/edit', (req, res) => {
-//     res.send('<form>Edit fruit</form>')
-// })
-
-// // Setup "update" route
-// router.put('/:index', (req, res) => {
-//     res.send('Updating a fruit at index! (in DB)')
-// })
-
-// // Setup "destroy" route
-// router.delete('/:index', (req, res) => {
-//     res.send('Deleting a fruit at index! (in DB)')
-// })
-
-// module.exports = router

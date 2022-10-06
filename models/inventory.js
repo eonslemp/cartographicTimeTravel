@@ -1,3 +1,5 @@
+// this file stores the essential data for maps currently displayed in the app
+
 const maps = [
     {
         country:'Netherlands',

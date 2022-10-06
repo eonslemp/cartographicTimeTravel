@@ -1,3 +1,5 @@
+// this file defines the basic layout for the pages of the app
+// import react
 const React = require('react')
 
 class Layout extends React.Component {
@@ -5,20 +7,12 @@ class Layout extends React.Component {
         return (
             <html id='layout'>
                 <head>
+                    {/* accesses the css for the pages */}
                 <link rel="stylesheet" href="/style.css" />
                 </head>
-                {/* <h1>
-                    <a href='/products'> Our Maps </a>
-                </h1> */}
                 <br />
                 <body>
-                    {/* <div>
-                        <a href='/products'> Our Maps </a>
-                     </div> */}
-                    {/* <h1>
-                        <a href='/products'> Our Maps </a>
-                    </h1> */}
-
+                    
                     {this.props.children}
                     <br />
                 </body>
@@ -26,5 +20,5 @@ class Layout extends React.Component {
         )
     }
 }
-
+// exports layout object
 module.exports = Layout

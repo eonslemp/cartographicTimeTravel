@@ -1,7 +1,4 @@
-@font-face {
-    font-family: 'germanic';
-    src: url(fonts/germanic)
-}
+/* defines basic css for application */
 body {
     background-color: rgb(220, 193, 158);
     font-size: 30px;
@@ -67,6 +64,11 @@ button {
     display: flex;
     justify-content: center;
     padding: 10px;
+}
+
+#nav-index {
+    display: flex;
+    justify-content: center;
 }
 
 /* #index-image {
